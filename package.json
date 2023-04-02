@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/index.js",
+    "start": "node -r dotenv/config dist/index.js",
     "dev": "nodemon | pino-pretty -c -t SYS:HH:MM:ss.l",
     "env:dev": "cross-env NODE_ENV=development",
     "build": "tsc -p tsconfig.json",
@@ -15,9 +15,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/env": "^4.2.0",
     "@fastify/swagger": "^8.3.1",
     "@fastify/swagger-ui": "^1.6.0",
+    "@types/massive": "^5.4.4",
     "fastify": "^4.15.0",
+    "fastify-massive": "^1.0.0",
     "fastify-plugin": "^4.5.0",
     "fluent-json-schema": "^4.1.0"
   },
