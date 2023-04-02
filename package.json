@@ -1,0 +1,30 @@
+{
+  "name": "fastify-starter-ts",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "dev": "nodemon | pino-pretty -c -t SYS:HH:MM:ss.l",
+    "env:dev": "cross-env NODE_ENV=development",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.15.0",
+    "fluent-json-schema": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "pino-pretty": "^10.0.0",
+    "rimraf": "^4.4.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.3"
+  }
+}
