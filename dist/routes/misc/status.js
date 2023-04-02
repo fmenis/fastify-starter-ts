@@ -18,7 +18,7 @@ async function status(fastify, opts) {
                 200: fluent_json_schema_1.default.object()
                     .additionalProperties(false)
                     .prop("status", fluent_json_schema_1.default.string())
-                    .description("TODO")
+                    .description("Status.")
                     .required()
                     .prop("version", fluent_json_schema_1.default.string())
                     .description("Server version.")
