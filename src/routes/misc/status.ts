@@ -17,7 +17,7 @@ export default async function status(fastify: FastifyInstance, opts: any) {
         200: S.object()
           .additionalProperties(false)
           .prop("status", S.string())
-          .description("TODO")
+          .description("Status.")
           .required()
           .prop("version", S.string())
           .description("Server version.")

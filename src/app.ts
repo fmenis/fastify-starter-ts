@@ -1,10 +1,12 @@
 import { FastifyInstance, FastifyRegisterOptions } from "fastify";
 
-import api from "./routes/index";
+import swaggerPlugin from "./plugins/swagger.plugin";
+import apiPlugin from "./routes/index";
 
 export default async function app(
   fastify: FastifyInstance,
   opts: any
 ): Promise<void> {
-  fastify.register(api, { prefix: "/api" });
+  fastify.register(swaggerPlugin);
+  fastify.register(apiPlugin, { prefix: "/api" });
 }
