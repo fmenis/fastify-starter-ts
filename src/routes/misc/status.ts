@@ -4,7 +4,6 @@ import S from "fluent-json-schema";
 import { getServerVersion } from "../../utils/utils";
 
 export default async function status(fastify: FastifyInstance, opts: any) {
-  const { massive } = fastify;
   const version = getServerVersion();
 
   fastify.route({
@@ -29,12 +28,6 @@ export default async function status(fastify: FastifyInstance, opts: any) {
   });
 
   async function onStatus(req: FastifyRequest, reply: FastifyReply) {
-    const res = await massive.users.findOne({
-      email: "filippomeniswork@gmail.com",
-    });
-
-    console.log(res);
-
     reply.send({ status: "ok", version });
   }
 }
